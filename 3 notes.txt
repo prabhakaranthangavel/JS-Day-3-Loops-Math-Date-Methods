@@ -1,0 +1,226 @@
+Contents:  
+
+1.Javascript Looping
+2.Math Methods
+3.Date Methods
+
+*************************************************************************************************************************
+
+===>for Loop
+
+*It loops fixed execution. 
+*that means know the starting and end point for loop is used. 
+*Two or more values printed used to for loop.
+*The output is vertical mode i.e one by one.
+
+*syntax:
+  for(initialization; condition; increment/decrement)
+  {
+    //block of code 
+  }
+
+*Example:
+for (var a=1;a<=10;a++)
+{
+   console.log(a);
+}                            // 1 2 3 4 5 6 7 8 9 10 (vertical mode)
+
+*************************************************************************************************************************
+
+===>While Loop
+
+*It loops through a block of code as long as the specified condition is true.
+*The line continues to execute untill the condition is true. 
+
+*Syntax:
+  while(condition)
+  {
+    //block of code (code will execute until condition is true)
+  }
+
+*Examples:
+   var countdown = 5;
+   var i =0;
+   while(i < countdown)
+   {
+    console.log(countdown);
+    countdown--;
+   }                         // 5 4 3 2 1 (vertical mode)
+
+*************************************************************************************************************************
+
+=>Do-While Loop
+
+*It will execute the body first then checks the condition satisfies or not.
+*First print and checks the condition.
+*If the condition first becomes fail then exit the loop immediately.
+
+*Syntax:
+   do{
+    //block of code
+   }while(condition)
+
+Example:
+   let count =0;
+   do{
+    console.log(count);
+    count ++;
+   }while(count<5)          // 1 2 3 4 (vertical mode)
+
+
+*************************************************************************************************************************
+
+===>if-else
+
+*It's nick name "conditional statement".
+*check the Two or more conditions.
+*syntax:
+  if(condition)
+  {
+    //block of codes
+  }
+
+  else(condition)
+  {
+    //block of codes
+  }
+
+*Example:
+var a=15;
+if(a%2 == 0
+{
+   console.log("EVEN");
+}
+else
+{
+   console.log("ODD");
+}                        //ODD
+
+*************************************************************************************************************************
+
+...Javascript Math Methods...
+
+=>Math.floor(Lowest or Base Value)
+console.log(Math.floor(5.9));//5
+console.log(Math.floor(-4.9));//-5****
+
+=>Math.ceil(Highest Value)
+console.log(Math.ceil(5.1));//6
+console.log(Math.ceil(-4.9));//-4****(put the negative input and print the output is lowest value)
+
+=>Math.round(Round Off the Value)
+console.log(Math.round(5.4));//5
+console.log(Math.round(6.6));//7
+
+=>Math.sqrt(The value squared)
+console.log(Math.sqrt(0));//0
+console.log(Math.sqrt(-2));//****Not A number****       
+console.log(Math.sqrt(25));//5
+
+=>Math.cbrt(The value cubed)
+console.log(Math.cbrt(27));//3
+console.log(Math.cbrt(125));//5
+console.log(Math.cbrt(-125));//-5****(Given the negative input and print the output is negative)  )
+
+==>Math.abs(Negative Value not considered then changed the positive Integer)
+console.log(Math.abs(-4.5));//4.5
+console.log(Math.abs(-4.8));//4.8
+console.log(Math.abs(-4.4));//4.4
+
+==>Math.trunc(Removed the decimal points and print the Integer value)
+console.log(Math.trunc(6.5));//6
+console.log(Math.trunc(5.8));//5
+console.log(Math.trunc(4.4));//4
+
+==>Math.min(Print the minimum value)
+console.log(Math.min(3,25,49,-3.28));//-3.28****
+
+==>Math.max(Print the maximum value)
+console.log(Math.max(3,25,49,3.28));//49
+
+==>Math.pow
+console.log(Math.pow(2,5));//2*2*2*2*2
+
+==>Math.random(Generates a random number from 0 to 9 with decimals)
+console.log(Math.random()*10)//OTP is a good examples
+
+*************************************************************************************************************************
+
+Date Methods
+
+what is date methods? : New Date() creates a date object with current date and time.
+
+==>toDateString() :- Returns the date portion of the date object
+const a = new Date();//date object
+console.log(a.toDateString());
+
+==>getDate() : Returns the day of the month(1 to 31) of a date.
+const b = new Date();//date object
+console.log(b.getDate());
+
+==>getFullYear() : Return the full year (4 digits) of a date.
+const c = new Date();//date object
+console.log(c.getFullYear());
+
+==>getMonth() : Return the month(0 to 11)of a date.
+const d = new Date();//date object
+console.log(d.getMonth());
+
+==>getDay() :-Return the day of the week(0to6) of a date.  
+
+==>getHours():- return the hours(0 to 23)of a date.
+
+==>getMinutes():- return the minutes(0 to 59)of a date.
+
+==>getSeconds():- return the seconds(0 to 59) of a date.
+
+==>getMilliseconds() :- return the milliseconds(0 to 999) of a date.
+
+==>getTime() :- return the number of milliseconds since jan 1
+
+const e = new Date();
+console.log(e.getDay());
+console.log(e.getHours());
+console.log(e.getMinutes());
+console.log(e.getSeconds());
+console.log(e.getMilliseconds());
+console.log(e.getTime());
+
+
+Date set methods:
+
+===>setDate():- sets the day of the month of a date.
+
+===>setFullYear() :- sets the full year of a date and also sets month and day.
+
+===>setHours() :- sets the hours of a date also sets minutes , seconds and milliseconds.
+
+===>setMilliseconds() :-  sets the milliseconds of a date.
+
+===>setMinutes() :-  sets minutes of a date also sets seconds and milliseconds.
+
+===>setSeconds() :- sets seconds of a date also sets milliseconds.
+
+===>setMonth() :- sets the month of a date also sets day of the month.
+
+===>setTime() :- sets a date and time by adding or subtracting a specified number od milliseconds(to/from mid of jan 1 1990)
+
+const f = new Date();
+f.setDate(27);
+console.log(f);
+f.setFullYear(2020,5,26);
+console.log(f);
+f.setHours(11);
+console.log(f);
+f.setMinutes(45);
+console.log(f);
+f.setSeconds(55);
+console.log(f);
+f.setMilliseconds(730);
+console.log(f);
+f.setMonth(6);
+console.log(f);
+f.setTime()
+console.log(f);
+
+*************************************************************************************************************************
